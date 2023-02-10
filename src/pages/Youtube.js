@@ -1,19 +1,25 @@
 import {Link, Outlet} from "react-router-dom";
+import NavBar from "../components/youtube/NavBar";
+import "../assets/scss/youtube.scss";
+import AboutUs from "./common/AboutUs";
+import Process from "./youtube/Process";
+import Creators from "./youtube/Creators";
+import ClientsnPartners from "./common/ClientsnPartners";
+import ContactUs from "./common/ContactUs";
 
 const Youtube = () => {
     return (
-        <div>
-            <header>
-                <h1>Youtube</h1>
-                <Link to="/youtube/about">About us</Link>
-                <Link to="/youtube/process">Process</Link>
-                <Link to="/youtube/creators">Creators</Link>
-                <Link to="/youtube/clients_partners">Clients and Partners</Link>
-                <Link to="/youtube/contact">Contact</Link>
+        <div id="youtube">
+            <header className="fixed-top">
+                <NavBar/>
             </header>
-            <main>
-            <Outlet/>
-            </main>
+            <div>
+            <AboutUs/>
+                <Process/>
+                <Creators/>
+                <ClientsnPartners/>
+                <ContactUs/>
+            </div>
         </div>
     );
 };
