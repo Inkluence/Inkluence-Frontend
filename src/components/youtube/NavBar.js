@@ -11,6 +11,7 @@ const NavBar =() => {
     }
 
 
+
     return (
         <Nav id="navbar-youtube" className="navbar navbar-expand-lg navbar-dark justify-content-between">
             <a className="navbar-brand" href="/">
@@ -23,11 +24,11 @@ const NavBar =() => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <Nav className="navbar-nav" id="myDIV">
-                    <a href="#about" className="nav-item nav-link">About us</a>
-                    <a href="#process" className="nav-item nav-link">Process</a>
-                    <a href="#creators" className="nav-item nav-link">Creators</a>
-                    <a href="#clients_partners" className="nav-item nav-link">Clients and Partners</a>
-                    <a href="#contact" className="nav-item nav-link">Contact</a>
+                    <a href="#about" className="nav-item nav-link active">About us</a>
+                    <a href="#process" className="nav-item nav-link active" >Process</a>
+                    <a href="#creators" className="nav-item nav-link active">Creators</a>
+                    <a href="#clients_partners" className="nav-item nav-link active">Clients and Partners</a>
+                    <a href="#contact" className="nav-item nav-link active">Contact</a>
 
                     {/*<Link to="/youtube/about" className="nav-item nav-link">About us</Link>*/}
                     {/*<Link to="/youtube/process" className="nav-item nav-link">Process</Link>*/}
