@@ -1,15 +1,12 @@
 import * as React from 'react';
 import '../../assets/scss/youtube.scss';
-
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import YoutubeLogo from '../../../src/assets/img/Youtube_Logo_BB.png';
-import InstagramLogo from '../../../src/assets/img/Instagram2_Logo_BB.png';
-import ModelLogo from '../../../src/assets/img/M_Logo_BB.png';
+import InstagramLogo from '../../../src/assets/img/Instagram_Logo_BB.png';
+import ModelLogo from '../../../src/assets/img/Model_Logo_BB.png';
 import { useNavigate } from 'react-router-dom';
 
 export default function NavCard({ type }) {
