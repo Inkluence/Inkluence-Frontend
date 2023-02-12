@@ -2,27 +2,23 @@ import { Typography } from '@mui/material';
 import { Box, Grid, Card } from '@mui/material';
 import { calcLength } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Logo from '../../src/assets/img/ink_logo.png';
 import Header from './Header';
+import NavCard from '../components/layout/NavCard';
 
 const Layout = () => {
   return (
-    <div style={{ backgroundColor: '#1E1E1E', width: '100%', height: 'calc(100vh)' }}>
+    <div style={{ backgroundColor: '#000', width: '100%', height: 'calc(100vh)' }}>
       <Header />
       <Box
         container
         display="flex"
         justifyContent={'center'}
-        sx={{ height: '10%', pt: 20, pb: 20 }}
+        sx={{ height: '10%', pt: 20, pb: 30 }}
       >
-        <Typography
-          variant="h1"
-          component="div"
-          sx={{ flexGrow: 1, color: 'white', textAlign: 'center' }}
-        >
-          Ink
-        </Typography>
+        <img src={Logo} width="258px" height="119px" alt="" />
       </Box>
-      <Box container sx={{ height: '50%' }}>
+      <Box container>
         <Grid
           container
           display="flex"
@@ -30,44 +26,14 @@ const Layout = () => {
           lineHeight={'calc(45vh)'}
           spacing={20}
         >
-          <Grid item xs={2}>
-            <Box container display="flex" justifyContent={'center'}>
-              <Link to="/youtube">
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{ flexGrow: 1, color: 'white', textDecoration: 'none' }}
-                >
-                  Youtube
-                </Typography>
-              </Link>
-            </Box>
+          <Grid item xs={3}>
+            <NavCard type={'YOUTUBE'} />
           </Grid>
-          <Grid item xs={2}>
-            <Box container display="flex" justifyContent={'center'}>
-              <Link to="/instagram">
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{ flexGrow: 1, color: 'white', textDecoration: 'none' }}
-                >
-                  Instagram
-                </Typography>
-              </Link>
-            </Box>
+          <Grid item xs={3}>
+            <NavCard type={'INSTA'} />
           </Grid>
-          <Grid item xs={2}>
-            <Box container display="flex" justifyContent={'center'}>
-              <Link to="/model">
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{ flexGrow: 1, color: 'white', textDecoration: 'none' }}
-                >
-                  Model
-                </Typography>
-              </Link>
-            </Box>
+          <Grid item xs={3}>
+            <NavCard type={'MODEL'} />
           </Grid>
         </Grid>
       </Box>
