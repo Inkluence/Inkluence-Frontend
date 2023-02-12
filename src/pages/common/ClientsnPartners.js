@@ -1,19 +1,16 @@
-import {motion} from "framer-motion";
-import {pageStyle, pageVariants, pageTransition} from '../../assets/js/PageTransition';
+
+import NormalProcess from "../../assets/img/normal_process.png";
+import InkProcess from "../../assets/img/ink_process.png";
 const ClientsnPartners = () => {
     return(
-        <motion.div
-            style={pageStyle}
-            initial="initial"
-            animate="in"
-            exit="out"
-            variants={pageVariants}
-            transition={pageTransition}
-        >
-            <div>
-                ClientsnPartners
+        <div id="clients_partners" className="youtube-process">
+            <div className="text-white">
+                <span className="title">Clients & Partners</span>
+                <div className="content">
+
+                </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 export default ClientsnPartners;

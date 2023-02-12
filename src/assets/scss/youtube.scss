@@ -1,0 +1,53 @@
+#youtube{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#navbar-youtube{
+  background-color: black;
+  padding: 0 6em;
+}
+
+.nav-link.active{
+  color: white;
+}
+
+.youtube-about{
+  padding: 0 6rem;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.youtube-process{
+  padding: 5rem 0 0 6rem;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .content{
+    text-align: center;
+  }
+  .process-text{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .image{
+    margin-top: 10rem;
+  }
+}
+
+.main-lead{
+    font-size: 2.3rem;
+  }
+
+.title{
+  font-size: 5rem;
+  font-weight: bold;
+}
