@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import { Box, Grid, Card } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { calcLength } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Logo from '../../src/assets/img/ink_logo.png';

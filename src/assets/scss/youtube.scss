@@ -43,6 +43,62 @@
   }
 }
 
+.youtube-creators {
+  padding: 5rem 6rem 0 6rem;
+
+  .card {
+    background-color: rgba(0, 0, 0);
+    border-radius: 0;
+  }
+
+  .card:hover {
+    background-color: rgba(68, 68, 68, 0.37);
+  }
+
+  .creator-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search{
+    border-radius: 30rem;
+    background-color: #303030;
+    border-color: #303030;
+    color: white;
+
+  }
+
+  .search::placeholder {
+    color: grey;
+    opacity: 3;
+  }
+
+  .pagination{
+
+    a{
+      background-color: transparent;
+      border: none;
+      color: #303030;
+    }
+
+    .page-item.active .page-link{
+      background-color: transparent !important;
+      border: none !important;
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  .category{
+    border: none;
+    border-radius: 20rem;
+  }
+
+
+
+}
+
 .main-lead {
   font-size: 2.3rem;
 }
@@ -51,11 +107,4 @@
   font-size: 5rem;
   font-weight: bold;
 }
-.card {
-  background-color: rgba(0, 0, 0);
-  border-radius: 0;
-}
 
-.card:hover {
-  background-color: rgba(68, 68, 68, 0.37);
-}
