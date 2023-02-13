@@ -6,6 +6,7 @@ import Process from "./youtube/Process";
 import Creators from "./youtube/Creators";
 import ClientsnPartners from "./common/ClientsnPartners";
 import ContactUs from "./common/ContactUs";
+import {Button} from "react-bootstrap";
 
 const Youtube = () => {
     return (
@@ -19,6 +20,7 @@ const Youtube = () => {
                 <Creators/>
                 <ClientsnPartners/>
                 <ContactUs/>
+                <Button variant="outline-secondary">Secondary</Button>{' '}
             </div>
         </div>
     );
