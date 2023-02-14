@@ -27,7 +27,7 @@ const CreatorsGridCard = () => {
         .map((creators) => {
             return (
                 <Col xl={3} lg={3} md={6} sm={12} className="creator-col" key={creators.id}>
-                    <a className="card_link" href={creators.youtube_link}>
+                    <a className="card_link" href={creators.youtube_link} target="_blank">
                         <Card>
                             <Card.Body>
                                 <div className="text-left">
