@@ -1,80 +1,52 @@
 // import node module libraries
 import React, {useState, Fragment, useEffect} from 'react';
-import {Col, Card, Image, Row, Form, Tabs, Tab, Nav, Button} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {Col, Card, Image, Row, Form, Nav, Button} from 'react-bootstrap';
 import ReactPaginate from 'react-paginate';
 
 // import data files
-import { CreatorsList } from '../../data/youtube/CreatorsData';
+import {CreatorsList} from '../../data/youtube/CreatorsData';
 import FeatherIcon from "feather-icons-react";
-import ItemList from "./test";
 
 const CreatorsGridCard = () => {
     const [creators, setCreatorsList] = useState(CreatorsList.slice(0, 500));
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState("");
+    const categories = [...new Set(creators.map(item => item.category))];
+    const [filteredItems, setFilteredItems] = useState([]);
 
     // paging start
     const [pageNumber, setPageNumber] = useState(0);
     const creatorsPerPage = 8;
     const pagesVisited = pageNumber * creatorsPerPage;
     const pageCount = Math.ceil(creators.length / creatorsPerPage);
-    const changePage = ({ selected }) => {
+    const changePage = ({selected}) => {
         setPageNumber(selected);
     };
-    const displayCreators = creators
+    const displayCreators = filteredItems
         .slice(pagesVisited, pagesVisited + creatorsPerPage)
         .map((creators) => {
             return (
                 <Col xl={3} lg={3} md={6} sm={12} className="creator-col" key={creators.id}>
-                    <Card>
-                        <Card.Body>
-                            <div className="text-left">
-                                <Image
-                                    src={creators.image}
-                                    className="avatar-xl mb-3 youtube-profile"
-                                    alt=""
-                                />
-                                <h6 className="mb-1">{creators.name}</h6>
-                            </div>
-                        </Card.Body>
-                    </Card>
+                    <a className="card_link" href={creators.youtube_link}>
+                        <Card>
+                            <Card.Body>
+                                <div className="text-left">
+                                    <Image
+                                        src={creators.image}
+                                        className="avatar-xl mb-3 youtube-profile"
+                                        alt=""
+                                    />
+                                    <h6 className="mb-1">{creators.name}</h6>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </a>
                 </Col>
             );
         });
     // end of paging
 
     // searching code started
-
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState("");
-    const categories = [...new Set(creators.map(item => item.category))];
-    const [filteredItems, setFilteredItems] = useState([]);
-
-
-    // useEffect(() => {
-    //         creators.filter(item => {
-    //             return (
-    //                 (selectedCategory === "" || item.category === selectedCategory)
-    //             );
-    //         })
-    // }, [selectedCategory]);
-
-    // useEffect(() => {
-    //     setFilteredItems(
-    //         creators.filter(item => {
-    //             return (
-    //                 item.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-    //                 (selectedCategory === "" || item.category === selectedCategory)
-    //             );
-    //         })
-    //     );
-    // }, [searchTerm, selectedCategory]);
-    //
-    // const getSearchTerm = (event) => {
-    //     let searchTerm = event.target.value;
-    //     setSearchTerm(searchTerm);
-    // };
-
-
     useEffect(() => {
         setFilteredItems(
             creators.filter(item => {
@@ -105,7 +77,6 @@ const CreatorsGridCard = () => {
 
     // end of searching
 
-
     return (
         <Fragment>
             <Row>
@@ -113,32 +84,32 @@ const CreatorsGridCard = () => {
                     <Row>
                         <Col>
                             <div>
-                                        <Nav variant="pills">
-                                            <Nav.Item>
-                                                <Button className="category mr-2"
-                                                    onClick={() => setSelectedCategory("")}
-                                                    style={{
-                                                        backgroundColor: selectedCategory === "" ? "#007bff" : "transparent",
-                                                        color: selectedCategory === "" ? "white" : "grey"
+                                <Nav variant="pills">
+                                    <Nav.Item>
+                                        <Button className="category mr-2"
+                                                onClick={() => setSelectedCategory("")}
+                                                style={{
+                                                    backgroundColor: selectedCategory === "" ? "#007bff" : "transparent",
+                                                    color: selectedCategory === "" ? "white" : "grey"
 
+                                                }}
+                                        >
+                                            전체
+                                        </Button>
+                                        {categories.map(category => (
+                                            <Button className="category mx-2"
+                                                    key={category}
+                                                    onClick={() => setSelectedCategory(category)}
+                                                    style={{
+                                                        backgroundColor: selectedCategory === category ? "#007bff" : "transparent",
+                                                        color: selectedCategory === category ? "white" : "grey"
                                                     }}
-                                                >
-                                                    전체
-                                                </Button>
-                                                {categories.map(category => (
-                                                    <Button className="category mx-2"
-                                                        key={category}
-                                                        onClick={() => setSelectedCategory(category)}
-                                                        style={{
-                                                            backgroundColor: selectedCategory === category ? "#007bff" : "transparent",
-                                                            color: selectedCategory === category ? "white" : "grey"
-                                                        }}
-                                                    >
-                                                        {category}
-                                                    </Button>
-                                                ))}
-                                            </Nav.Item>
-                                        </Nav>
+                                            >
+                                                {category}
+                                            </Button>
+                                        ))}
+                                    </Nav.Item>
+                                </Nav>
                             </div>
                         </Col>
                         <Col className="pe-0">
@@ -150,7 +121,6 @@ const CreatorsGridCard = () => {
                                     onChange={getSearchTerm}
                                     className="search"
                                 />
-
                             </Form.Group>
                         </Col>
                     </Row>
@@ -158,7 +128,7 @@ const CreatorsGridCard = () => {
             </Row>
 
             <Row>
-                 {/*<ItemList/>*/}
+                {/*<ItemList/>*/}
                 {displayCreators.length > 0 ? (
                     displayCreators
                 ) : (
@@ -167,8 +137,8 @@ const CreatorsGridCard = () => {
             </Row>
 
             <ReactPaginate
-                previousLabel={ <FeatherIcon icon="chevron-left" />}
-                nextLabel={<FeatherIcon icon="chevron-right" />}
+                previousLabel={<FeatherIcon icon="chevron-left"/>}
+                nextLabel={<FeatherIcon icon="chevron-right"/>}
                 pageCount={pageCount}
                 onPageChange={changePage}
                 containerClassName={'justify-content-center mb-0 pagination'}

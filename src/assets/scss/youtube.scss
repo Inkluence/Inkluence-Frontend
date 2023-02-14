@@ -51,6 +51,11 @@
     border-radius: 0;
   }
 
+  .card_link{
+    text-decoration: none;
+    color: white;
+  }
+
   .card:hover {
     background-color: rgba(68, 68, 68, 0.37);
   }
