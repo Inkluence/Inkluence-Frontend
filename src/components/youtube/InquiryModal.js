@@ -7,6 +7,7 @@ function InquiryModal(props) {
 
     const [company, setCompany] = useState("");
     const [item, setItem] = useState("");
+    const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [homepage, setHomepage] = useState("");
@@ -75,6 +76,17 @@ function InquiryModal(props) {
                             required
                             value={item}
                             onChange={(e) => setItem(e.target.value)}
+                        />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="company">
+                        <Form.Label>담당자명</Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="담당자 이름을 입력해주세요."
+                            autoFocus
+                            required
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="phone">

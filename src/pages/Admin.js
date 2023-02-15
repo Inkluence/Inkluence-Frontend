@@ -25,8 +25,8 @@ const Admin = () => {
                     <NavBar/>
                     <Container className="container-fluid">
                         <Row className="row">
-                            <Col ><SideBar></SideBar></Col>
-                                <main role="main" className="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                            <SideBar></SideBar>
+                                <main role="main" className="col-md-10 ml-sm-auto col-lg-10 pt-3 px-4">
                                     <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                                        <Outlet/>
                                     </div>
