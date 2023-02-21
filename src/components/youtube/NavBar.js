@@ -2,6 +2,7 @@ import {Nav, NavLink} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
 import Logo from "../../assets/img/logo_white.png"
 import {useEffect} from "react";
+import GoogleButton from "../elements/GoogleButton";
 const NavBar =() => {
     const navigate = useNavigate();
 
@@ -29,6 +30,7 @@ const NavBar =() => {
                     <a href="#creators" className="nav-item nav-link active">Creators</a>
                     <a href="#clients_partners" className="nav-item nav-link active">Clients and Partners</a>
                     <a href="#contact" className="nav-item nav-link active">Contact</a>
+                    {/*<GoogleButton />*/}
 
                     {/*<Link to="/youtube/about" className="nav-item nav-link">About us</Link>*/}
                     {/*<Link to="/youtube/process" className="nav-item nav-link">Process</Link>*/}

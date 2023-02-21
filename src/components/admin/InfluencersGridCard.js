@@ -34,6 +34,7 @@ const InfluencersGridCard = () => {
                                         src={students.image}
                                         className="rounded-circle avatar-xl mb-3"
                                         alt=""
+                                        width="100%"
                                     />
                                 </div>
                                 {/*<h4 className="mb-0">{students.name}</h4>*/}
@@ -91,7 +92,7 @@ const InfluencersGridCard = () => {
             <div className="mb-4">
                 <Form.Control
                     type="search"
-                    placeholder="Search Students"
+                    placeholder="인플루언서 검색"
                     value={searchTerm}
                     onChange={getSearchTerm}
                 />

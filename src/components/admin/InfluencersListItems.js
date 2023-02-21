@@ -26,8 +26,8 @@ import {
 // import data files
 import { CreatorsList } from '../../data/youtube/CreatorsData';
 
-import GlobalFilter from "./GlobalFilter";
-import Pagination from "./Pagination";
+import GlobalFilter from "../elements/GlobalFilter";
+import Pagination from "../elements/Pagination";
 
 const InfluencersListItems = () => {
     // The forwardRef is important!!
@@ -192,7 +192,7 @@ const InfluencersListItems = () => {
                         <GlobalFilter
                             filter={globalFilter}
                             setFilter={setGlobalFilter}
-                            placeholder="Search Students"
+                            placeholder="인플루언서 검색"
                         />
                     </Col>
                 </Row>

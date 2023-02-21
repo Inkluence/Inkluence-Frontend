@@ -27,7 +27,7 @@ function KakaoMap() {
         };
     },[]);
 
-    return <div ref={mapRef} style={{ width: "40%", height: "500px" }} />;
+    return <div ref={mapRef} style={{ width: "100%", height: "500px" }} />;
 }
 
 export default KakaoMap;
