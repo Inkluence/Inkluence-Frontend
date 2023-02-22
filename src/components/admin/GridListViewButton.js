@@ -1,4 +1,5 @@
 import { Nav, Button } from 'react-bootstrap';
+import FeatherIcon from "feather-icons-react";
 
 const GridListViewButton = ({ keyGrid, keyList }) => {
     return (
@@ -10,7 +11,7 @@ const GridListViewButton = ({ keyGrid, keyList }) => {
                             variant="outline-primary"
                             className="btn-outline-white btn-tab-left"
                         >
-                            <span className="fe fe-grid"></span>
+                            <FeatherIcon icon="grid"/>
                         </Button>
                     </Nav.Link>
                 </Nav.Item>
@@ -20,7 +21,7 @@ const GridListViewButton = ({ keyGrid, keyList }) => {
                             variant="outline-primary"
                             className="btn-outline-white btn-tab-right"
                         >
-                            <span className="fe fe-list"></span>
+                            <FeatherIcon icon="list"/>
                         </Button>
                     </Nav.Link>
                 </Nav.Item>

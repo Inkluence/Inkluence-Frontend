@@ -6,10 +6,12 @@ function InquiryDetails() {
     const location = useLocation();
     const id = location.state.id;
 
+    console.log(id);
+
     const [inquiry, setInquiry] = useState([]);
 
     useEffect(() => {
-        axios.get("/api/inquiry/"+{id})
+        axios.get("/api/inquiry/"+id)
             .then(response => {
                 setInquiry(response.data);
             })

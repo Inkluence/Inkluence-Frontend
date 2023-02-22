@@ -106,8 +106,8 @@ const InfluencersGridCard = () => {
             </Row>
 
             <ReactPaginate
-                previousLabel={<FeatherIcon icon="chevron-right" size="14px" />}
-                nextLabel={<FeatherIcon icon="chevron-left" size="14px" />}
+                previousLabel={<FeatherIcon icon="chevron-left" size="14px" />}
+                nextLabel={<FeatherIcon icon="chevron-right" size="14px" />}
                 pageCount={pageCount}
                 onPageChange={changePage}
                 containerClassName={'justify-content-center mb-0 pagination'}

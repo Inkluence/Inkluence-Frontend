@@ -6,13 +6,13 @@ function KakaoMap() {
     useEffect(() => {
         const container = mapRef.current;
         const options = {
-            center: new window.kakao.maps.LatLng(33.450701, 126.570667),
+            center: new window.kakao.maps.LatLng(37.3987806, 126.9795886),
             level: 3,
         };
         const map = new window.kakao.maps.Map(container, options);
 
         // 마커가 표시될 위치입니다
-        var markerPosition  = new window.kakao.maps.LatLng(33.450701, 126.570667);
+        var markerPosition  = new window.kakao.maps.LatLng(37.3987806, 126.9795886);
 
         // 마커를 생성합니다
         var marker = new window.kakao.maps.Marker({

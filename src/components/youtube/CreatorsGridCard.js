@@ -41,16 +41,17 @@ const CreatorsGridCard = () => {
     const [pageNumber, setPageNumber] = useState(0);
     const creatorsPerPage = 8;
     const pagesVisited = pageNumber * creatorsPerPage;
-    const pageCount = Math.ceil(CreatorsList.length / creatorsPerPage);
+    const pageCount = Math.ceil(displayedCreators.length / creatorsPerPage);
     const changePage = ({selected}) => {
         setPageNumber(selected);
     };
+
     const displayCreators = displayedCreators
         .slice(pagesVisited, pagesVisited + creatorsPerPage)
         .map((creators) => {
                 return (
                     <Col xl={3} lg={3} md={6} sm={12} className="creator-col" key={creators.id}>
-                        <a className="card_link" href={creators.youtube_link} target="_blank">
+                        <a className="card_link" href={creators.youtube.channelURL} target="_blank">
                             <Card>
                                 <Card.Body>
                                     <div className="text-left">

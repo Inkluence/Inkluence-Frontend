@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { Col, Row, Card, Tab, Breadcrumb } from 'react-bootstrap';
 import GridListViewButton from "../../components/admin/GridListViewButton";
 import InfluencersGridCard from "../../components/admin/InfluencersGridCard";
@@ -14,9 +13,9 @@ const Influencers = () => {
                         <Col lg={12} md={12} sm={12}>
                             <div className="border-bottom pb-4 mb-4 d-flex align-items-center justify-content-between">
                                 <div className="mb-3 mb-md-0">
-                                    <h1 className="mb-1 h2 fw-bold">
-                                        Creators <span className="fs-5 text-muted">(1,22,105 )</span>
-                                    </h1>
+                                    {/*<h1 className="mb-1 h2 fw-bold">*/}
+                                    {/*    Creators <span className="fs-5 text-muted">(1,22,105 )</span>*/}
+                                    {/*</h1>*/}
                                     {/*<Breadcrumb>*/}
                                     {/*    <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>*/}
                                     {/*    <Breadcrumb.Item href="#">User</Breadcrumb.Item>*/}

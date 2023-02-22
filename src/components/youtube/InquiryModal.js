@@ -70,7 +70,6 @@ function InquiryModal(props){
                                     <Form.Control
                                         type="text"
                                         placeholder="회사 또는 브랜드명을 입력해주세요."
-                                        autoFocus
                                         required
                                         name="companyName" value={formData.companyName} onChange={handleChange}
                                     />
@@ -98,7 +97,6 @@ function InquiryModal(props){
                                     <Form.Control
                                         type="text"
                                         placeholder="담당자 이름을 입력해주세요."
-                                        autoFocus
                                         required
                                         name="manager" value={formData.manager} onChange={handleChange}
                                     />

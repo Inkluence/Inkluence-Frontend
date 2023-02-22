@@ -7,11 +7,16 @@ import ContactUs from "../pages/common/ContactUs";
 
 const YoutubeRoutes = (
     <>
-        <Route index path="/youtube/about" element={<AboutUs/>}/>
-        <Route path="/youtube/process" element={<Process/>}/>
-        <Route path="/youtube/creators" element={<Creators/>}/>
-        <Route path="/youtube/clients_partners" element={<ClientsnPartners/>}/>
-        <Route path="/youtube/contact" element={<ContactUs/>}/>
+        {/*<Route index path="/youtube/about" element={<AboutUs/>}/>*/}
+        {/*<Route path="/youtube/process" element={<Process/>}/>*/}
+        {/*<Route path="/youtube/creators" element={<Creators/>}/>*/}
+        {/*<Route path="/youtube/clients_partners" element={<ClientsnPartners/>}/>*/}
+        {/*<Route path="/youtube/contact" element={<ContactUs/>}/>*/}
+            <Route index path="/about" element={<AboutUs/>}/>
+            <Route path="/process" element={<Process/>}/>
+            <Route path="/creators" element={<Creators/>}/>
+            <Route path="/clients_partners" element={<ClientsnPartners/>}/>
+            <Route path="/contact" element={<ContactUs/>}/>
     </>
 );
 

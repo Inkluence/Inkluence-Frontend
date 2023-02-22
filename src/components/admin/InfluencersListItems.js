@@ -77,6 +77,7 @@ const InfluencersListItems = () => {
                         <div className="d-flex align-items-center">
                             <Image
                                 src={row.original.image}
+                                width="150px"
                                 alt=""
                                 className="rounded-circle avatar-md me-2"
                             />

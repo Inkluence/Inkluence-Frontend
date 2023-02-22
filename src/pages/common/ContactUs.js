@@ -17,9 +17,9 @@ const ContactUs = () => {
                             <div className="mx-5">
                                 <p className="company">주식회사 인클루언스</p>
                                 <p>대표: 홍성재, 김태영</p>
-                                <p>사업자등록번호: </p>
-                                <p>주소: </p>
-                                <p>E-mail: </p>
+                                <p>사업자등록번호: 810-81-02855</p>
+                                <p>주소: 경기도 안양시 동안구 안양판교로 40, 106호 (관양동)</p>
+                                <p>E-mail: biz@inkluence.com</p>
                                 <p className="copyright mt-2">Copyright © 2023 INKLUENCE Co.Ltd. All Rights Reserved </p>
                             </div>
                         </Col>

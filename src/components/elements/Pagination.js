@@ -1,6 +1,7 @@
 // import node module libraries
 import React from 'react';
 import { Row, Col, Button, ListGroup } from 'react-bootstrap';
+import FeatherIcon from "feather-icons-react";
 
 const Pagination = ({
                         previousPage,
@@ -24,7 +25,7 @@ const Pagination = ({
                                     onClick={() => previousPage()}
                                     className="page-link mx-1 rounded"
                                 >
-                                    <i className="fe fe-chevron-left"></i>
+                                    <FeatherIcon icon="chevron-left"/>
                                 </Button>
                             </ListGroup.Item>
                             {Array.from(Array(pageCount).keys()).map((page) => (
@@ -47,7 +48,8 @@ const Pagination = ({
                                     onClick={() => nextPage()}
                                     className="page-link mx-1 rounded"
                                 >
-                                    <i className="fe fe-chevron-right"></i>
+                                    <FeatherIcon icon="chevron-right"/>
+                                    {/*<i className="fe fe-chevron-right"></i>*/}
                                 </Button>
                             </ListGroup.Item>
                         </ListGroup>

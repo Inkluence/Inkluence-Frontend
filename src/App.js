@@ -16,12 +16,12 @@ function App() {
   return (
     <AnimatePresence>
       <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route path="/youtube" element={<Youtube />} location={location} key={location.pathname}>
+        {/*<Route path="/" element={<Layout />} />*/}
+        <Route path="/" element={<Youtube />} location={location} key={location.pathname}>
           {YoutubeRoutes}
         </Route>
-        <Route path="/instagram" element={<Instagram />} />
-        <Route path="/model" element={<Model />} />
+        {/*<Route path="/instagram" element={<Instagram />} />*/}
+        {/*<Route path="/model" element={<Model />} />*/}
         <Route path="/admin" element={<PrivateRoute />} location={location} key={location.pathname}>
           {AdminRoutes}
         </Route>

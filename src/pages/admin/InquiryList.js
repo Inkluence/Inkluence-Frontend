@@ -7,6 +7,8 @@ import InquiryTable from "./InquiryTable";
 
 function InquiryList() {
     const [waitingInquiries, setWaitingInquiries] = useState([]);
+    const [allInquiries, setAllInquiries] = useState([]);
+    const [checkedInquiries, setCheckedInquiries] = useState([]);
 
     useEffect(() => {
         axios.get("/api/waitinginquiries")
@@ -16,6 +18,22 @@ function InquiryList() {
             .catch(error => {
                 console.log(error);
             });
+
+            axios.get("/api/checkedinquiries")
+                .then(response => {
+                        setCheckedInquiries(response.data);
+                })
+                .catch(error => {
+                        console.log(error);
+                });
+
+            axios.get("/api/inquiries")
+                .then(response => {
+                        setAllInquiries(response.data);
+                })
+                .catch(error => {
+                        console.log(error);
+                });
     }, []);
 
     return (
@@ -54,10 +72,10 @@ function InquiryList() {
             <Card.Body className="p-0">
             <Tab.Content>
             <Tab.Pane eventKey="all" className="pb-4">
-            <InquiryTable inquiry_data={waitingInquiries} />
+            <InquiryTable inquiry_data={allInquiries} />
             </Tab.Pane>
             <Tab.Pane eventKey="approved" className="pb-4">
-            <InquiryTable inquiry_data={waitingInquiries} />
+            <InquiryTable inquiry_data={checkedInquiries} />
             </Tab.Pane>
             <Tab.Pane eventKey="pending" className="pb-4">
             <InquiryTable inquiry_data={waitingInquiries} />
@@ -67,20 +85,6 @@ function InquiryList() {
             </Card>
             </Tab.Container>
             </Row>
-
-            {/*{inquiries.map(inquiry => (*/}
-            {/*    <Link key={inquiry.id} to={`/admin/inquiry/${inquiry.id}`} state={{ inquiry }}>*/}
-            {/*        <div>*/}
-            {/*            <h2>{inquiry.companyName}</h2>*/}
-            {/*            <p>Product: {inquiry.productName}</p>*/}
-            {/*            <p>Manager: {inquiry.manager}</p>*/}
-            {/*            <p>Contact: {inquiry.managerContact}</p>*/}
-            {/*            <p>Email: {inquiry.managerEmail}</p>*/}
-            {/*            <p>Status: {inquiry.status ? "대기중" : "처리완료"}</p>*/}
-            {/*            <p>Content: {inquiry.content}</p>*/}
-            {/*        </div>*/}
-            {/*    </Link>*/}
-            {/*))}*/}
         </div>
     );
 }
