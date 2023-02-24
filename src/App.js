@@ -1,11 +1,7 @@
 import './App.css';
-
-import Layout from './pages/Layout';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import NoPage from './pages/NoPage';
-import Instagram from './pages/Instagram';
-import Model from './pages/Model';
-import { AnimatePresence } from 'framer-motion';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import Youtube from './pages/Youtube';
 import YoutubeRoutes from './routes/YoutubeRoutes';
 import AdminRoutes from './routes/AdminRoutes';
@@ -14,7 +10,7 @@ import PrivateRoute from './routes/PrivateRoute';
 function App() {
   const location = useLocation();
   return (
-    <AnimatePresence>
+    <GoogleOAuthProvider clientId="">
       <Routes>
         {/*<Route path="/" element={<Layout />} />*/}
         <Route path="/" element={<Youtube />} location={location} key={location.pathname}>
@@ -27,8 +23,9 @@ function App() {
         </Route>
         <Route path="*" element={<NoPage />} />
       </Routes>
-    </AnimatePresence>
+    </GoogleOAuthProvider>
   );
 }
+
 
 export default App;
