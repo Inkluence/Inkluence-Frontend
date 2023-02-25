@@ -50,30 +50,31 @@ const CreatorsGridCard = () => {
         setPageNumber(selected);
     };
 
-    const displayCreators = displayedCreators
-        .slice(pagesVisited, pagesVisited + creatorsPerPage)
-        .map((creators) => {
-                return (
-                    <Col xl={3} lg={3} md={6} sm={12} className="creator-col" key={creators.id}>
-                        <a className="card_link" href={creators.youtube.channelURL} target="_blank">
-                            <Card>
-                                <Card.Body>
-                                    <div className="text-left">
-                                        <Image
-                                            width="256px"
-                                            height="256px"
-                                            src={creators.image}
-                                            className="avatar-xl mb-3 youtube-profile"
-                                            alt=""
-                                        />
-                                        <h6 className="mb-1">{creators.name}</h6>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </a>
-                    </Col>
-                );
-        });
+    const displayCreators = Array.isArray(displayedCreators)
+        ? displayedCreators.slice(pagesVisited, pagesVisited + creatorsPerPage).map((creators) => {
+            return (
+                <Col xl={3} lg={3} md={6} sm={12} className="creator-col" key={creators.id}>
+                    <a className="card_link" href={creators.youtube.channelURL} target="_blank">
+                        <Card>
+                            <Card.Body>
+                                <div className="text-left">
+                                    <Image
+                                        width="256px"
+                                        height="256px"
+                                        src={creators.image}
+                                        className="avatar-xl mb-3 youtube-profile"
+                                        alt=""
+                                    />
+                                    <h6 className="mb-1">{creators.name}</h6>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </a>
+                </Col>
+            );
+        })
+        : null;
+
     // end of paging
 
 
