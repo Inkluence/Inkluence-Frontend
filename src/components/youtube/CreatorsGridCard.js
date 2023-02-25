@@ -10,7 +10,8 @@ const CreatorsGridCard = () => {
     const [CreatorsList, setCreatorsList] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState("");
-    const categories = [...new Set(CreatorsList.map(item => item.category))];
+    const [categories, setCategories] = useState([]);
+    // const categories = [...new Set(CreatorsList.map(item => item.category))];
     const [displayedCreators, setDisplayedCreators] = useState([]);
 
 
@@ -23,6 +24,9 @@ const CreatorsGridCard = () => {
     // filter creators based on selected category and search term
     useEffect(() => {
         let filteredCreators = CreatorsList;
+        if (Array.isArray(CreatorsList)) {
+            setCategories([...new Set(CreatorsList.map(item => item.category))])
+        }
 
         if (selectedCategory !== '') {
             filteredCreators = filteredCreators.filter(creator => creator.category === selectedCategory);

@@ -23,7 +23,7 @@ function KakaoMap() {
         marker.setMap(map);
 
         return () => {
-            map.remove();
+            map.relayout();
         };
     },[]);
 
