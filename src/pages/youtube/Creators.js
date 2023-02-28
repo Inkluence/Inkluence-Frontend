@@ -1,6 +1,4 @@
 
-import NormalProcess from "../../assets/img/normal_process.png";
-import InkProcess from "../../assets/img/ink_process.png";
 import CreatorsList from "../../components/youtube/Creators";
 const Creators = () => {
     return(

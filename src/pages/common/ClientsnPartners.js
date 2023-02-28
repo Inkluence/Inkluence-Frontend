@@ -1,8 +1,4 @@
 
-import NormalProcess from "../../assets/img/normal_process.png";
-import InkProcess from "../../assets/img/ink_process.png";
-
-import Client1 from "../../assets/img/client1.png";
 import {Col, Row} from "react-bootstrap";
 const ClientsnPartners = () => {
     return(
@@ -11,15 +7,17 @@ const ClientsnPartners = () => {
                 <span className="title">Clients & Partners</span>
                 <div className="content">
                     <Row className="clients-logo ">
-                        <Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/collab+Korea+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>
+                        {/*<Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/collab+Korea+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>*/}
                         <Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/Intercontinental+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>
-                        <Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/jeju+air+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>
-                    </Row>
-                    <Row className="clients-logo">
                         <Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/kitchenaid+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>
                         <Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/thinkway+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>
-                        <Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/treasure+hunter+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>
+                        {/*<Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/jeju+air+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>*/}
                     </Row>
+                    {/*<Row className="clients-logo">*/}
+                    {/*   */}
+                    {/*    /!*<Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/treasure+hunter+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>*!/*/}
+                    {/*    <Col><img src="" alt=""/></Col>*/}
+                    {/*</Row>*/}
                     <Row className="clients-logo">
                         <Col><img src="https://inkluence-s3-bucket.s3.ap-northeast-2.amazonaws.com/clients/xiaomi+%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png" alt=""/></Col>
                         <Col><img src="" alt=""/></Col>

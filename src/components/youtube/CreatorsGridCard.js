@@ -53,8 +53,8 @@ const CreatorsGridCard = () => {
     const displayCreators = Array.isArray(displayedCreators)
         ? displayedCreators.slice(pagesVisited, pagesVisited + creatorsPerPage).map((creators) => {
             return (
-                <Col xl={3} lg={3} md={6} sm={12} className="creator-col" key={creators.id}>
-                    <a className="card_link" href={creators.youtube.channelURL} target="_blank">
+                <Col xl={3} lg={3} md={6} sm={3} className="creator-col" key={creators.id}>
+                    {/*<a className="card_link" href={creators.youtube.channelURL} target="_blank">*/}
                         <Card>
                             <Card.Body>
                                 <div className="text-left">
@@ -69,7 +69,7 @@ const CreatorsGridCard = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                    </a>
+                    {/*</a>*/}
                 </Col>
             );
         })

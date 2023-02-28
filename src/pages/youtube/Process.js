@@ -1,7 +1,6 @@
 
 import NormalProcess from "../../assets/img/normal_process.png";
 import InkProcess from "../../assets/img/ink_process.png";
-import {Row} from "react-bootstrap";
 
 const Process = () => {
     return(

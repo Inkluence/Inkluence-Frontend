@@ -1,6 +1,4 @@
 
-import NormalProcess from "../../assets/img/normal_process.png";
-import InkProcess from "../../assets/img/ink_process.png";
 import KakaoMap from "../../components/youtube/KakaoMap";
 import {Col, Row} from "react-bootstrap";
 const ContactUs = () => {
