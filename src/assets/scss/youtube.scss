@@ -6,7 +6,7 @@
 
 #navbar-youtube {
   background-color: black;
-  padding: 0 6em;
+  padding: 0 6vw;
 }
 
 .nav-link.active {
@@ -14,7 +14,7 @@
 }
 
 .youtube-about {
-  padding: 0 6rem;
+  padding: 0 6vw;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -31,7 +31,7 @@
 }
 
 .youtube-process {
-  padding: 5rem 0 0 6rem;
+  padding: 5vw 6vw 0 6vw;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -49,10 +49,14 @@
   .image {
     margin-top: 10rem;
   }
+  .process-image{
+    width: 70%;
+  }
 }
 
 .youtube-creators {
-  padding: 5rem 6rem 0 6rem;
+  padding: 5vh 6vw 5vh 6vw;
+  height: 100%;
 
   .card {
     background-color: rgba(0, 0, 0);
@@ -101,11 +105,16 @@
       color: white;
       text-decoration: underline;
     }
+
   }
 
   .category{
     border: none;
     border-radius: 20rem;
+  }
+
+  .youtube-profile{
+    object-fit: cover;
   }
 
 }
@@ -128,26 +137,26 @@
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 5vw;
   font-weight: bold;
 }
 
 
 .clients-logo{
   img{
-    width: 60%;
+    width: 100%;
   }
-  .col{
-    margin: 3rem 0 3rem 0;
-  }
+  //.col{
+  //  margin: 3rem 0 3rem 0;
+  //}
 }
 
 
 .youtube-clients {
-  padding: 6rem 6rem 0 6rem;
+  padding: 5vh 6vw 5vh 6vw;
   width: 100%;
   height: 100vh;
-  position: relative;
+  //position: relative;
   display: flex;
   align-items: center;
 
@@ -162,7 +171,7 @@
 }
 
 .youtube-contact {
-  padding: 6rem 0rem 0 6rem;
+  padding: 6vh 6vw 0 6vw;
   width: 100%;
   position: relative;
 
@@ -287,3 +296,39 @@ $ease-cb: cubic-bezier(.19,1,.22,1);
   77%   { opacity: 1;  }
   100% { opacity:0.7; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
 }
+
+
+
+/*responsive */
+
+@media only screen and (max-width: 765px) {
+  .main-lead {
+    font-size: 5.5vw;
+  }
+  .title{
+    font-size: 10vw;
+  }
+  .youtube-process .process-text{
+    font-size: 3vw;
+  }
+
+  .youtube-clients{
+    height: 100%;
+  }
+
+  .company-detail{
+    margin-top: 5vh;
+    font-size: 3vw;
+  }
+  //.youtube-process, .youtube-clients, .youtube-creators, .youtube-contact{
+  //  padding: 0;
+  //}
+}
+
+
+
+//@media only screen and (max-width: 600px) {
+//  .main-lead {
+//    font-size: 3.5vw;
+//  }
+//}

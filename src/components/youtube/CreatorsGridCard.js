@@ -53,7 +53,7 @@ const CreatorsGridCard = () => {
     const displayCreators = Array.isArray(displayedCreators)
         ? displayedCreators.slice(pagesVisited, pagesVisited + creatorsPerPage).map((creators) => {
             return (
-                <Col xl={3} lg={3} md={6} sm={3} className="creator-col" key={creators.id}>
+                <Col xl={3} lg={4} md={6} sm={12} className="creator-col" key={creators.id}>
                     {/*<a className="card_link" href={creators.youtube.channelURL} target="_blank">*/}
                         <Card>
                             <Card.Body>
@@ -89,7 +89,7 @@ const CreatorsGridCard = () => {
             <Row>
                 <Col className="mb-3">
                     <Row>
-                        <Col>
+                        <Col xl={6} lg={6} md={6} sm={12} className="pe-0 mt-2">
                             <div>
                                 <Nav variant="pills">
                                     <Nav.Item>
@@ -119,7 +119,7 @@ const CreatorsGridCard = () => {
                                 </Nav>
                             </div>
                         </Col>
-                        <Col className="pe-0">
+                        <Col className="pe-0 mt-2">
                             <Form.Group className="mb-3 position-relative" controlId="formSearchbyName">
                                 <Form.Control
                                     placeholder="크리에이터 검색하기"
